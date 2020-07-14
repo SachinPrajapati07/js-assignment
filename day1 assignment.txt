@@ -1,0 +1,139 @@
+DAY 1 ASSIGNMENT:
+
+Q.1 : Explore and explain the various methods in console function
+Explain them
+Ex. console.log()
+console.warn().
+etc...
+
+ANS: In javascript, the console is an object which provides access to the browser debugging console. 
+The console object provides us with several different methods, like :
+log()
+error()
+warn()
+clear()
+time() and timeEnd()
+table()
+
+1.console.log()
+
+Mainly used to log(print) the output to the console. We can put any type inside the log(), be it a string, array, object, boolean etc.
+console.log('abc');  
+console.log(1); 
+console.log(true); 
+console.log(null); 
+
+2.console.error()
+
+Used to log error message to the console. Useful in testing of code. By default the error message will be highlighted with red color.
+console.error('This is a simple error');
+
+3.console.warn()
+
+Used to log warning message to the console. By default the warning message will be highlighted with yellow color.
+console.warn('This is a warning.'); 
+
+4.console.clear()
+
+Used to clear the console.
+console.clear(); 
+
+5.console.time() and console.timeEnd()
+
+Whenever we want to know the amount of time spend by a block or a function, we can make use of the time() and timeEnd() methods provided by the javascript console object. They take a label which must be same, and the code inside can be anything( function, object, simple console).
+
+console.time('abc'); 
+ let fun =  function(){ 
+     console.log('fun is running'); 
+ } 
+ let fun2 = function(){ 
+     console.log('fun2 is running..'); 
+ } 
+ fun();  
+ fun2(); 
+console.timeEnd('abc'); 
+
+6.console.table()
+
+This method allows us to generate a table inside a console. The input must be an array or an object which will be shown as a table.
+console.table({'a':1, 'b':2});
+------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------
+
+Q.2 :Write the difference between var, let and const with code examples.
+
+var and let are both used for variable declaration in javascript but the difference between them is that var is function scoped and let is block scoped.
+Variables defined with const behave like let variables, except they cannot be reassigned
+var declarations are globally scoped or function scoped while let and const are block scoped.
+var variables can be updated and re-declared within its scope; let variables can be updated but not re-declared; const variables can neither be updated nor re-declared.
+
+e.g
+
+VAR
+// Var
+// String
+var name = "Prasad"; 
+// Number
+var age = 24;
+// Boolean
+var canFly = false;
+// Array
+var languages = ['Hindi','English','Marathi'];
+// Objects
+var friends = {
+    name:"Vishal",
+    hobby:"Coding",
+}
+
+var a = 10;
+console.log(a);
+
+var a = null;
+console.log(a);
+
+LET
+// Let 
+{
+   let city;
+   let name = "Sai Sir"; 
+   name = "Viral Sir";
+   console.log("Using Let: ", name);
+}
+console.log(name)
+
+CONST
+// const - Constant
+
+const country = "India";
+console.log(country);
+
+// country = "UK";
+
+const _fruits = ["mango", "apple"]
+console.log(_fruits)
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------
+
+Q.3 :Write a brief intro on available data types in Javascript.
+
+JavaScript provides different data types to hold different types of values. There are two types of data types in JavaScript.
+
+Primitive data type
+Non-primitive (reference) data type
+
+There are five types of primitive data types in JavaScript. They are as follows:
+
+String : represents sequence of characters e.g. "hello"
+Number : represents numeric values e.g. 100
+Boolean : represents boolean value either false or true
+Undefined : represents undefined value
+Null : represents null i.e. no value at all
+
+The non-primitive data types are as follows:
+
+Object : represents instance through which we can access members
+Array : represents group of similar values
+RegExp : represents regular expression
