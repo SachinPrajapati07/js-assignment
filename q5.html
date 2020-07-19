@@ -1,0 +1,46 @@
+<html>
+<head>
+<title>Day 4 assignment</title>
+
+<script type="text/javascript">
+
+function validate() {
+	var amount=document.Calculator.Sales.value;
+	if (amount >= 25000) {
+		alert("Sales Value must be between 0-25000 only. Please re-enter the value.");
+	}
+}
+
+function compute() {
+	var amount=document.Calculator.Sales.value;
+	var percent=0;
+	if (amount > 20000){
+		var percent = "10";	
+	}
+	else if (amount >= 10000 && amount < 20000) {
+		var percent = "7";
+	}
+	else if (amount <10000 && amount >= 5000){
+		var percent = "5";
+	}
+	else (amount < 5000)
+    {
+		var percent = "2";
+	}
+    console.log(amount);
+    console.log(percent);
+	var total=0;
+	var total=amount*percent;
+	console.log(total);
+    document.getElementById("Total").value= total;
+	//return total;	
+}
+</script>
+</head>
+<body>
+    <form name="Calculator" id="Calculator">
+	Sales Value: <input type="text" id="Sales" name="Sales" onblur="validate()" value="" /><br>
+			<input type="submit" value="Calculate" /><br>
+	Commission: <input type="text" name="Total" id="Total" onsubmit="compute()" value="" />
+</form>
+</body></html>

@@ -1,27 +1,24 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Day 3 assignment</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script>
-            function findOddEven(){
-                var num = document.getElementById('num').value;
-                if ( num % 2 == 0) {
-                    document.getElementById('result')
-                    console.log(num + ' is an Even number');
-                }else{
-                    document.getElementById('result')
-                    console.log(num + ' is an odd number');
-                }
-            }        
-        </script>
-    </head>
-    <body>
-        <h2>find Odd or Even number!</h2>
-        <div  id="result">
-            Enter a number:  <input type="number" id="num" name="num" min="0" /><input type="button" value="Find Odd or Even" onclick="findOddEven()" name="find" />
-            </div>
-        
-    </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day4 assignment</title>
+</head>
+<body>
+    <script>
+       for(let i=1;i<=100;i++){
+if(i%3==0){
+    let a=console.log("fizz");
+}
+if(i%5==0){
+   let b= console.log("buzz");
+}
+if((i%3==0)&&(i%5==0)){
+    let c=console.log("fizzbuzz");
+}
+console.log(i);
+       }
+    </script>
+</body>
 </html>

@@ -1,88 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Question 2</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 4 assignment</title>
 </head>
 <body>
     <script>
-
-        //String methods
-
-        // 1.charAt()
-        var str = "HELLO WORLD";
-  var res = str.charAt(0)
-  console.log(res);
-
-  // 2.charCodeAt()
-  var str = "HELLO WORLD";
-var n = str.charCodeAt(1);
-console.log(n);
-
-// 3.concat()
-var str1 = "Hello jannn my ";
-var str2 = "world!";
-var res = str1.concat(str2);
-console.log(res);
-
-// 4.endswith()
-var str = "Hello world, welcome to the universe.";
-var n = str.endsWith("hello.");
-console.log(n);
-
-// 5.includes()
-var str = "Hello world, welcome to the universe.";
-var n = str.includes("world");
-console.log(n);
-
-// 6.indexOf()
-var str = "Hello world, welcome to the universe.";
-var n = str.indexOf("welcome");
-console.log(n);
-
-// 7.replace()
-var str = "lets doit";
-var res = str.replace("doit", "upgrade");
-console.log(res);
-
-
-
-// Array methods
-
-//1.concat()
-var hege = ["Cecilie", "Lone"];
-var stale = ["Emil", "Tobias", "Linus"];
-var children = hege.concat(stale)
-console.log(children);
-
-//2.copyWithin();
-var fruits = ["Banana", "Orange", "Apple", "Mango"];
-fruits.copyWithin(2, 0);
-console.log(fruits);
-
-//3.fill()
-var fruits = ["Banana", "Orange", "Apple", "Mango"];
-fruits.fill("Kiwi");
-console.log(fruits);
-
-//4.length
-var fruits = ["Banana", "Orange", "Apple", "Mango"];
-var n=fruits.length;
-console.log(n);
-
-//5.sort()
-var fruits = ["Banana", "Orange", "Apple", "Mango"];
-var n=fruits.sort();
-console.log(n);
-
-//6.slice()
-var fruits = ["Banana", "Orange", "Apple", "Mango"];
-fruits.splice(2, 0, "Lemon", "Kiwi");
-console.log(fruits);
-
-//7.toString()
-var fruits = ["Banana", "Orange", "Apple", "Mango"];
-var x = fruits.toString();
-console.log(x);
+        const student={
+            name:"Helsinki",
+            age:24,
+            projects:{
+                diceGame:"Two player dice game using Javascript"
+            }
+        }
+        const {name,age,projects:{diceGame}}=student;
+        console.log(name,age,diceGame);
     </script>
 </body>
 </html>
