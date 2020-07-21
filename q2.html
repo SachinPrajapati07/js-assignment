@@ -3,19 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Day 4 assignment</title>
+    <title>Day 5 assignment</title>
 </head>
 <body>
     <script>
-        const student={
-            name:"Helsinki",
-            age:24,
-            projects:{
-                diceGame:"Two player dice game using Javascript"
+        class User{
+            constructor(name,age,email){
+                this.name=name;
+                this.age=age;
+                this.email=email;
+                this.coin=0;
+                this.courses=[];
+            }
+            login(){
+                console.log(`${this.name} has logged in`);
+                return this;
+            }
+            logout(){
+                console.log(`${this.name} has logged out`);
+                return this;
             }
         }
-        const {name,age,projects:{diceGame}}=student;
-        console.log(name,age,diceGame);
+
+        class Moderator extends User{
+    constructor(name,age,email){
+        super(name,age,email);
+        
+    }
+
+    addcoin(){
+        this.coin++;
+        console.log(`${this.name} has ${this.coin} coins`);
+        return this;}
+    removecoin(){
+        this.coin--;
+        console.log(`${this.name} has ${this.coin} coins`);
+        return this;
+    }
+
+}
+
+class Admin extends Moderator{
+   
+   addCourse(user,course){
+       user.courses.push(course);
+       console.log(user);
+   }
+}
+
+let user1=new User('Sachin',20,'sachin@gmail.com');
+let user2=new User('satish',20,'s@gmail.com');
+let mod=new Moderator('raj',22,'raj@email.com');
+let admin=new Admin('srk',55,'srk@yahoo.com');
+        user1.login();
+        user1.logout();
+        user2.login();
+        user2.logout();
+        mod.addcoin();
+        mod.removecoin();
+        admin.addCourse(user1,'python');
+        admin.addCourse(user1,'.NET'); 
     </script>
 </body>
 </html>

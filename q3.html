@@ -3,17 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Day 4 assignment</title>
+    <title>Day 5 assignment</title>
 </head>
 <body>
     <script>
-       var sl=['milk','fivestar','bread','onion','potato'];
-       var sl2=['cheese','tomato'];
-    
-    console.log("old shopping list is:"+sl);
-       Array.prototype.push.apply(sl, sl2);
-console.log("New Shopping list is :"+sl);
-
-    </script>
+        fetch('https://jsonplaceholder.typicode.com/todos')
+        .then(response=>response.json())
+        .then(data=>console.log(data))
+        </script>
 </body>
 </html>
