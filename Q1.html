@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 6 assignment</title>
+</head>
+<body>
+    <div id="background">
+    <h1>WELCOME TO DAY 6 ASSIGNMENT</h1>
+    
+    <script>
+var i = 0;
+function change() {
+  var doc = document.getElementById("background");
+  var color = ["black", "blue", "brown", "green"];
+  doc.style.backgroundColor = color[i];
+  i = (i + 1) % color.length;
+  if(i>color.length){
+      i=0;
+  }
+}
+setInterval(change, 5000);
+    </script>
+    </div>
+</body>
+</html>

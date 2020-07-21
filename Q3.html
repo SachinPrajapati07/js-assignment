@@ -3,38 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Day 3 assignment</title>
+    <link type="css" href="toggle.css">
+
+    <title>Day 6 assignment</title>
+    
 </head>
 <body>
+        
+    <h1>Helllo!!!!!</h1>
+    <h2 id='time'></h2>
+    <h3 id='d'>hii</h3>
+<button id="dark">Switch to Dark Mode</button>
     <script>
-        let m=Number(prompt("Enter your marks:"));
+        var name=prompt("Enter your Name:");
+        alert("Welcome "+name);
 
-        //using conditional statement
-        if (m>=90) {
-            console.log("Marks are: "+m+" and Grade is: A");
-        } else if(m<90){
-            console.log("Marks are: "+m+" and Grade is: B");}
-            else{
-            console.log("Failed");
-            }
-        //switch case
-    
+        const ctime = document.getElementById('time');
 
-switch (m) {
-    case 90:
-        console.log("your grade is A");
-        break;
-    case 80: 
-        console.log("your grade is B");
-        break;
-    case 70:
-        console.log("your grade is C");
-        break;
-        case 60:
-        console.log("your grade is D");
-        break;
-    default:
-        console.log('You Failed');}
+
+function clock(){
+    let date = new Date();
+    let time = date.toLocaleTimeString();
+    ctime.innerText = time;
+}
+setInterval(clock,1000);
+
+
+var d=document.getElementById('d');
+//d.classList.add('dark-mode');
+d.classList.toggle("dark-mode");
+
+const dmode = document.getElementById('dark');
+
+dmode.onclick = function changeColor(){
+
+    document.body.style.backgroundColor = 'black';
+    document.body.style.color = 'white';
+    document.body.style.fontFamily = 'Helvetica';
+
+}
     </script>
+    </div>
 </body>
 </html>
